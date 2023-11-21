@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MarsRoverForm.vue renders correctly 1`] = `
+<div>
+  <h2>
+    Configurações do Planalto e Rover
+  </h2>
+   
+  <label
+    for="plateauSize"
+  >
+    Tamanho do Planalto:
+  </label>
+   
+  <input
+    id="plateauSize"
+    placeholder="Ex: 5 5"
+    type="text"
+  />
+   
+  <label
+    for="roverPosition"
+  >
+    Posição do Rover:
+  </label>
+   
+  <input
+    id="roverPosition"
+    placeholder="Ex: 1 2 N"
+    type="text"
+  />
+   
+  <label
+    for="roverInstructions"
+  >
+    Instruções do Rover:
+  </label>
+   
+  <input
+    id="roverInstructions"
+    placeholder="Ex: LMLMLMLMM"
+    type="text"
+  />
+   
+  <button>
+    Enviar
+  </button>
+   
+  <!---->
+</div>
+`;

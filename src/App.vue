@@ -1,17 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <MarsRoverForm @formSubmitted="handleFormSubmission" />
+    <RoverResult :roverResult="roverResult" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MarsRoverForm from "@/components/MarsRoverForm.vue";
+import RoverResult from "@/components/RoverResult.vue";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    MarsRoverForm,
+    RoverResult,
+  },
+  data() {
+    return {
+      roverResult: {},
+    };
+  },
+  methods: {
+    async handleFormSubmission(response) {
+      try {
+        const roverData = response.data;
+
+        this.roverResult = roverData;
+      } catch (error) {
+        console.error("Erro ao manipular dados recebidos:", error.message);
+      }
+    },
+  },
+};
 </script>
 
 <style>
